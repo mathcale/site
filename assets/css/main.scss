@@ -1,0 +1,120 @@
+---
+---
+
+@import 'typo';
+
+.is-home {
+  background: url(../img/bg.svg) no-repeat right top;
+}
+
+.intro {
+  margin-top: 50px;
+
+  .avatar {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  .connect {
+    margin-top: 30px;
+
+    .social-list {
+      padding-left: 0px;
+
+      li {
+        display: inline-block;
+        list-style: none;
+
+        &:not(.no-dash)::after {
+          content: ' • ';
+        }
+
+        &.actual-separator {
+          padding: 0 5px;
+        }
+
+        a {
+          position: relative;
+          font-weight: bold;
+          text-decoration: none;
+          color: #000;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 6px;
+            margin-top: 6px;
+            margin-left: 3px;
+            background-color: #9AADCE;
+            transform: rotate(-5deg);
+            opacity: 0;
+            transition: all 300ms ease;
+            z-index: -1;
+          }
+
+          &:hover {
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.resume {
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .resume-list {
+    margin-left: 25px;
+    padding-left: 0px;
+
+    li {
+      list-style: none;
+
+      &.course,
+      &.title {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .skill {
+    margin-bottom: 10px;
+
+    .name,
+    .level {
+      display: inline-block;
+    }
+
+    .name p {
+      margin: 0;
+    }
+
+    .level {
+      width: 200px;
+      height: 10px;
+      padding: 2px;
+      border: 3px solid #333;
+      border-radius: 20px;
+
+      .level-size {
+        height: 10px;
+        background-color: #333;
+        border-radius: 20px;
+
+        $steps: (10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+
+        @each $step in $steps {
+          &.level-#{$step} {
+            width: 0% + $step;
+          }
+        }
+      }
+    }
+  }
+}
