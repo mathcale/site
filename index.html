@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="row intro">
-  <div class="col-md-6">
+  <div class="col-md-6 col-sm-12">
     <img src="{{ '/assets/img/m.jpg' | relative_path }}" class="avatar" />
 
     <p class="make-it-big">Hello, my name is <span class="name-brand">Matheus Calegaro</span> I'm a passionated Software Developer based in Brazil.</p>
@@ -15,7 +15,7 @@ layout: default
         <li><a href="https://codepen.io/{{ site.social.codepen }}" target="_blank">Codepen</a></li>
         <li class="no-dash"><a href="https://medium.com/@{{ site.social.medium }}" target="_blank">Medium</a></li>
         <li class="actual-separator no-dash">|</li>
-        <li class="no-dash"><a href="#" target="_blank">Contact</a></li>
+        <li class="no-dash"><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -124,7 +124,7 @@ layout: default
           <h2>Skills</h2>
 
           <div class="row skill">
-            <div class="col-md-2 name">
+            <div class="col-md-2 col-sm-2 name">
               <p>HTML</p>
             </div>
 
@@ -134,7 +134,7 @@ layout: default
           </div>
 
           <div class="row skill">
-            <div class="col-md-2 name">
+            <div class="col-md-2 col-sm-2 name">
               <p>CSS</p>
             </div>
 
@@ -144,7 +144,7 @@ layout: default
           </div>
 
           <div class="row skill">
-            <div class="col-md-2 name">
+            <div class="col-md-2 col-sm-2 name">
               <p>Javascript</p>
             </div>
 
@@ -154,7 +154,7 @@ layout: default
           </div>
 
           <div class="row skill">
-            <div class="col-md-2 name">
+            <div class="col-md-2 col-sm-2 name">
               <p>PHP</p>
             </div>
 
@@ -164,7 +164,7 @@ layout: default
           </div>
 
           <div class="row skill">
-            <div class="col-md-2 name">
+            <div class="col-md-2 col-sm-2 name">
               <p>SQL</p>
             </div>
 
@@ -229,5 +229,36 @@ layout: default
         </section>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row contact" id="contact">
+  <div class="col-md-12 col-sm-12">
+    <h1 class="text-center">Contact</h1>
+    <p class="text-center">Let's get in touch! Feel free to write in English or Portuguese.</p>
+
+    <form method="POST" name="contact" class="contact-form" netlify>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 form-control">
+          <input type="text" name="name" id="name" placeholder="Your Name" class="input" required />
+        </div>
+
+        <div class="col-md-6 col-sm-5 form-control">
+          <input type="email" name="email" id="email" placeholder="Your E-mail" class="input" required />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-11 form-control">
+          <textarea name="message" id="message" class="textarea" placeholder="Your Message" required></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 form-control">
+          <button type="submit" class="btn-submit">Send</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
