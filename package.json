@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mathcale/site/issues"
   },
-  "homepage": "https://matheus.me"
+  "homepage": "https://matheus.me",
+  "dependencies": {
+    "bulma": "^0.7.1"
+  }
 }
