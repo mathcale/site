@@ -47,6 +47,11 @@ h3 {
       font-size: 40px;
     }
 
+    @media (max-width: 480px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
     .name-brand {
       display: block;
       margin-bottom: -10px;
@@ -62,6 +67,15 @@ h3 {
       @media (max-width: 1280px) {
         font-size: 70px;
       }
+
+      @media (max-width: 480px) {
+        margin: 5px 0;
+        font-size: 50px;
+      }
     }
   }
+}
+
+section h2 {
+  margin: 10px 0;
 }

@@ -9,7 +9,7 @@
   background: url(../img/bg.svg) no-repeat right top;
 
   @media only screen and (max-width: 65em) {
-    background-size: 80%;
+    background-size: 90%;
     overflow-x: hidden;
   }
 }
@@ -22,10 +22,10 @@
 }
 
 .intro {
-  margin-top: 50px;
+  padding-top: 50px;
 
   @media only screen and (max-width: 48em) {
-    padding: 0 20px;
+    padding: 20px;
   }
 
   .avatar {
@@ -33,8 +33,16 @@
     border-radius: 50%;
   }
 
+  p {
+    line-height: 70px;
+  }
+
   .connect {
     margin-top: 30px;
+
+    @media (max-width: 480px) {
+      margin-top: 10px;
+    }
 
     .social-list {
       padding-left: 0px;
@@ -56,6 +64,10 @@
           font-weight: bold;
           text-decoration: none;
           color: #000;
+
+          @media (max-width: 480px) {
+            font-size: 14px;
+          }
 
           &::before {
             content: '';
@@ -91,8 +103,25 @@
   }
 
   .resume-list {
+    position: relative;
     margin-left: 25px;
+    margin-bottom: 20px;
     padding-left: 0px;
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      width: 50px;
+      height: 1px;
+      border: 1px dashed #949494;
+    }
 
     li {
       list-style: none;
@@ -105,25 +134,43 @@
   }
 
   .skill {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
     .name,
     .level {
       display: inline-block;
+
+      @media (max-width: 900px) {
+        display: block;
+      }
     }
 
-    .name p {
-      margin: 0;
+    .name {
+      @media (max-width: 900px) {
+        padding: 0 0.75rem;
+      }
+
+      p {
+        margin: 0;
+        font-weight: bold;
+      }
     }
 
     .level {
+      position: relative;
       width: 200px;
-      height: 10px;
+      height: 20px;
+      margin-top: 15px;
       padding: 2px;
       border: 3px solid #505690;
       border-radius: 20px;
 
+      @media (max-width: 900px) {
+        margin-top: 0px;
+      }
+
       .level-size {
+        position: relative;
         height: 10px;
         background-color: #505690;
         border-radius: 20px;
@@ -148,7 +195,7 @@
   .contact-form {
     margin-top: 30px;
 
-    .row {
+    .column {
       margin-bottom: 15px;
     }
 
