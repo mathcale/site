@@ -134,7 +134,11 @@
   }
 
   .skill {
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+
+    @media (max-width: 900px) {
+      margin-bottom: 15px;
+    }
 
     .name,
     .level {
@@ -166,7 +170,7 @@
       border-radius: 20px;
 
       @media (max-width: 900px) {
-        margin-top: 0px;
+        margin: 0px 0px 0px 10px;
       }
 
       .level-size {
@@ -188,6 +192,10 @@
 }
 
 .contact {
+  @media (max-width: 1080px) {
+    padding: 20px;
+  }
+
   h1 {
     margin-bottom: 10px;
   }
@@ -197,10 +205,11 @@
 
     .column {
       margin-bottom: 15px;
-    }
 
-    .form-control {
-      padding: 0 20px;
+      @media (max-width: 768px) {
+        margin-bottom: 0px;
+        padding: 5px 12px;
+      }
     }
 
     .input,
