@@ -191,6 +191,26 @@
   }
 }
 
+.projects {
+  .projects-wrapper {
+    margin-top: 20px;
+  }
+
+  .card .card-content {
+    padding: 0.5rem 1.5rem 1rem;
+    text-align: center;
+
+    .card-links {
+      margin-top: 10px;
+    }
+
+    .tech {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
 .contact {
   @media (max-width: 1080px) {
     padding: 20px;
