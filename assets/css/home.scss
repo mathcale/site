@@ -196,17 +196,21 @@
     margin-top: 20px;
   }
 
-  .card .card-content {
-    padding: 0.5rem 1.5rem 1rem;
-    text-align: center;
+  .card {
+    min-height: 300px;
 
-    .card-links {
-      margin-top: 10px;
-    }
+    .card-content {
+      padding: 0.5rem 1.5rem 1rem;
+      text-align: center;
 
-    .tech {
-      margin-top: 5px;
-      font-size: 14px;
+      .card-links {
+        margin-top: 10px;
+      }
+
+      .tech {
+        margin-top: 5px;
+        font-size: 14px;
+      }
     }
   }
 }
