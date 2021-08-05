@@ -2,7 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
-export function Navbar() {
+interface NavbarProps {
+  absolute: boolean;
+}
+
+export function Navbar({ absolute }: NavbarProps) {
   const router = useRouter();
 
   const navLinks = [
@@ -43,7 +47,7 @@ export function Navbar() {
     ));
 
   return (
-    <nav className="bg-transparent absolute w-full">
+    <nav className={['bg-transparent', 'w-full', absolute && 'absolute'].join(' ')}>
       <div className="container">
         <div className="relative flex items-center justify-between h-20">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

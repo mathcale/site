@@ -1,14 +1,15 @@
 import { Navbar } from '../Navbar/Navbar';
 
 interface LayoutProps {
+  absoluteNavbar?: boolean;
   children: JSX.Element;
 }
 
-export function Layout({ children }: LayoutProps): JSX.Element {
+export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
   return (
     <>
       <div className="relative min-h-screen w-screen bg">
-        <Navbar />
+        <Navbar absolute={absoluteNavbar ?? false} />
         <main className="container">{children}</main>
       </div>
 
