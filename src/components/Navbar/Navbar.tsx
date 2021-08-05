@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 export function Navbar() {
@@ -91,7 +92,10 @@ export function Navbar() {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/">
-                <h1 className="text-white font-bold text-xl">Matheus Calegaro</h1>
+                <a className="flex items-center">
+                  <Image src="/img/logo.svg" alt="Logo" width={32} height={32} />
+                  <h1 className="text-white font-bold text-xl ml-4">Matheus Calegaro</h1>
+                </a>
               </Link>
             </div>
           </div>
