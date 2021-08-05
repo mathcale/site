@@ -18,8 +18,8 @@ export function Navbar() {
         <a
           className={
             router.pathname === navLink.href
-              ? 'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
-              : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+              ? 'text-white px-3 py-2 rounded-md text-sm font-bold'
+              : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'
           }
         >
           {navLink.title}
@@ -45,7 +45,7 @@ export function Navbar() {
   return (
     <nav className="bg-transparent absolute w-full">
       <div className="container">
-        <div className="relative flex items-center justify-between h-16">
+        <div className="relative flex items-center justify-between h-20">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
