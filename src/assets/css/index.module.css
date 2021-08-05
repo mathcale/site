@@ -1,0 +1,24 @@
+.pic {
+  border-radius: 0.5rem;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.socials li {
+  display: inline-block;
+}
+
+.socials li:not(:last-child) {
+  position: relative;
+  margin-right: 30px;
+}
+
+.socials li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 44px;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(244, 244, 244, 0.25);
+  border-radius: 50%;
+}
