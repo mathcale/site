@@ -1,4 +1,6 @@
+import { Fragment } from 'react';
 import Head from 'next/head';
+
 import { Layout } from '../components';
 
 interface Experience {
@@ -11,6 +13,20 @@ interface Experience {
 enum SkillType {
   SOFT = 'SOFT',
   HARD = 'HARD',
+}
+
+interface SkillItem {
+  name: string;
+  type?: SkillType;
+}
+
+interface Skill {
+  title: string;
+  items: SkillItem[];
+}
+
+interface SkillsMap {
+  [key: string]: Skill;
 }
 
 export default function AboutPage() {
@@ -45,25 +61,96 @@ export default function AboutPage() {
     },
   ];
 
-  const skills = [
-    { name: 'Javascript', type: SkillType.HARD },
-    { name: 'Node.js', type: SkillType.HARD },
-    { name: 'Golang', type: SkillType.HARD },
-    { name: 'Nest.js', type: SkillType.HARD },
-    { name: 'Java', type: SkillType.HARD },
-    { name: 'React', type: SkillType.HARD },
-    { name: 'Next.js', type: SkillType.HARD },
-    { name: 'SQL', type: SkillType.HARD },
-    { name: 'MongoDB', type: SkillType.HARD },
-    { name: 'DynamoDB', type: SkillType.HARD },
-    { name: 'MySQL', type: SkillType.HARD },
-    { name: 'AWS', type: SkillType.HARD },
-    { name: 'Collaboration', type: SkillType.SOFT },
-    { name: 'Comunication', type: SkillType.SOFT },
-    { name: 'Leadership', type: SkillType.SOFT },
-    { name: 'Ownership', type: SkillType.SOFT },
-    { name: 'Emotional intelligence', type: SkillType.SOFT },
-  ];
+  const skills: SkillsMap = {
+    engineering: {
+      title: 'Software engineering',
+      items: [
+        { name: 'Design patterns' },
+        { name: 'Solutions architecturing' },
+        { name: 'Clean code' },
+        { name: 'Project structuring' },
+      ],
+    },
+    languages: {
+      title: 'Languages',
+      items: [
+        { name: 'Javascript/Typescript', type: SkillType.HARD },
+        { name: 'Golang', type: SkillType.HARD },
+        { name: 'Java', type: SkillType.HARD },
+        { name: 'SQL', type: SkillType.HARD },
+        { name: 'HTML', type: SkillType.HARD },
+        { name: 'CSS', type: SkillType.HARD },
+      ],
+    },
+    backend: {
+      title: 'Back-end',
+      items: [
+        { name: 'Node.js', type: SkillType.HARD },
+        { name: 'Nest.js', type: SkillType.HARD },
+        { name: 'Spring Boot', type: SkillType.HARD },
+      ],
+    },
+    frontend: {
+      title: 'Front-end',
+      items: [
+        { name: 'React', type: SkillType.HARD },
+        { name: 'React Native', type: SkillType.HARD },
+        { name: 'Next.js', type: SkillType.HARD },
+        { name: 'Gatsby', type: SkillType.HARD },
+        { name: 'Vue.js', type: SkillType.HARD },
+      ],
+    },
+    databases: {
+      title: 'Databases',
+      items: [
+        { name: 'MongoDB', type: SkillType.HARD },
+        { name: 'DynamoDB', type: SkillType.HARD },
+        { name: 'MySQL', type: SkillType.HARD },
+        { name: 'PostgreSQL', type: SkillType.HARD },
+        { name: 'Redis', type: SkillType.HARD },
+        { name: 'Elasticsearch', type: SkillType.HARD },
+      ],
+    },
+    messaging: {
+      title: 'Messaging/asynchronism',
+      items: [
+        { name: 'SQS' },
+        { name: 'SNS' },
+        { name: 'Kinesis' },
+        { name: 'AWS IoT Core' },
+        { name: 'RabbitMQ' },
+      ],
+    },
+    devops: {
+      title: 'DevOps',
+      items: [
+        { name: 'Docker', type: SkillType.HARD },
+        { name: 'CloudFormation', type: SkillType.HARD },
+        { name: 'CodePipeline', type: SkillType.HARD },
+        { name: 'Github Actions', type: SkillType.HARD },
+      ],
+    },
+    cloud: {
+      title: 'Cloud providers/services',
+      items: [
+        { name: 'AWS' },
+        { name: 'Digital Ocean' },
+        { name: 'Linode' },
+        { name: 'Heroku' },
+        { name: 'Firebase' },
+      ],
+    },
+    soft: {
+      title: 'Non-technical',
+      items: [
+        { name: 'Collaboration', type: SkillType.SOFT },
+        { name: 'Comunication', type: SkillType.SOFT },
+        { name: 'Leadership', type: SkillType.SOFT },
+        { name: 'Ownership', type: SkillType.SOFT },
+        { name: 'Emotional intelligence', type: SkillType.SOFT },
+      ],
+    },
+  };
 
   return (
     <>
@@ -97,24 +184,19 @@ export default function AboutPage() {
             <div className="md:col-6">
               <h2 className="text-2xl text-white font-bold mb-7">Skills</h2>
 
-              <div className="flex flex-row flex-wrap mb-9">
-                {skills.map((skill, i) => (
-                  <div
-                    className={[
-                      'bg-white',
-                      'mr-3',
-                      'mb-3',
-                      'px-4',
-                      'py-1',
-                      'rounded-full',
-                      'font-small',
-                    ].join(' ')}
-                    key={i}
-                  >
-                    {skill.name}
+              {Object.keys(skills).map((key, i) => (
+                <Fragment key={i}>
+                  <h3 className="text-md text-gray-100 mb-3">{skills[key].title}</h3>
+
+                  <div className="flex flex-row flex-wrap mb-3">
+                    {skills[key].items.map((item, j) => (
+                      <div className="bg-white mr-3 mb-3 px-4 py-1 rounded-full font-small" key={j}>
+                        {item.name}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </Fragment>
+              ))}
             </div>
           </div>
         </>
