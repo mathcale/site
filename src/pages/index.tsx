@@ -35,7 +35,7 @@ export default function IndexPage() {
             </div>
 
             <div className="md:col-5 flex flex-col justify-center">
-              <h1 className="mb-16 text-6xl text-white font-extrabold leading-relaxed">
+              <h1 className="mb-16 text-xl text-white font-extrabold md:leading-relaxed md:text-6xl">
                 I’m a full-stack Software Engineer from Brazil
               </h1>
 
