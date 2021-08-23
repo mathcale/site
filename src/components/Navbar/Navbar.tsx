@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { Transition } from '@headlessui/react';
 
 interface NavbarProps {
   absolute: boolean;
@@ -8,6 +10,7 @@ interface NavbarProps {
 
 export function Navbar({ absolute }: NavbarProps) {
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const navLinks = [
     { title: '/index', href: '/' },
@@ -56,40 +59,43 @@ export function Navbar({ absolute }: NavbarProps) {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
+              onClick={() => setIsOpen(!isOpen)}
             >
               <span className="sr-only">Open main menu</span>
 
-              <svg
-                className="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-
-              <svg
-                className="hidden h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              {!isOpen ? (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              )}
             </button>
           </div>
 
@@ -104,9 +110,24 @@ export function Navbar({ absolute }: NavbarProps) {
             </div>
           </div>
 
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 hidden sm:block">
-            <div className="flex space-x-4">{renderNavLinks()}</div>
-          </div>
+          <Transition
+            show={isOpen}
+            enter="transition ease-out duration-100 transform"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="transition ease-in duration-75 transform"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            {(ref) => (
+              <div
+                ref={ref}
+                className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 md:hidden"
+              >
+                <div className="flex space-x-4">{renderNavLinks()}</div>
+              </div>
+            )}
+          </Transition>
         </div>
       </div>
 
