@@ -98,6 +98,9 @@ export default function AboutPage() {
         { name: 'Next.js', type: SkillType.HARD },
         { name: 'Gatsby', type: SkillType.HARD },
         { name: 'Vue.js', type: SkillType.HARD },
+        { name: 'Tailwind', type: SkillType.HARD },
+        { name: 'Bootstrap', type: SkillType.HARD },
+        { name: 'Chakra UI', type: SkillType.HARD },
       ],
     },
     databases: {
