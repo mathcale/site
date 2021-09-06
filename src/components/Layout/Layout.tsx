@@ -15,7 +15,7 @@ export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
 
       <div className="relative min-h-screen w-screen bg">
         <Navbar absolute={absoluteNavbar ?? false} />
-        <main className="container">{children}</main>
+        <main className="container pl-6 pr-6 md:pl-0 md:pr-0">{children}</main>
       </div>
 
       <style jsx>{`
