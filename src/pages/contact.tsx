@@ -38,12 +38,11 @@ export default function ContactPage() {
                 </label>
 
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-white border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-gray-200 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
                   required
                 />
-                {/* <p className="text-red-500 text-xs italic">Please fill out this field.</p> */}
               </div>
             </div>
 
@@ -57,7 +56,7 @@ export default function ContactPage() {
                 </label>
 
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="email"
                   type="email"
                   required
@@ -75,7 +74,7 @@ export default function ContactPage() {
                 </label>
 
                 <textarea
-                  className=" no-resize appearance-none block w-full bg-gray-200 text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  className=" no-resize appearance-none block w-full bg-gray-200 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                   id="message"
                   required
                 ></textarea>
