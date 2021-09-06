@@ -22,6 +22,8 @@ export default function ContactPage() {
             netlify-honeypot="pot"
             className="w-full max-w-lg"
           >
+            <input type="hidden" name="form-name" value="contact" />
+
             <p className="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="pot" />
