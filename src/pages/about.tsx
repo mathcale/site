@@ -163,7 +163,7 @@ export default function AboutPage() {
 
       <Layout>
         <>
-          <h1 className="my-12 text-6xl text-white font-extrabold">About me</h1>
+          <h1 className="my-12 text-5xl md:text-6xl text-white font-extrabold">About me</h1>
 
           <div className="row">
             <div className="md:col-6">
