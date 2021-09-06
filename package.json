@@ -1,22 +1,27 @@
 {
   "name": "site",
-  "version": "5.0.0",
-  "description": "My personal website/blog",
-  "scripts": {
-    "dev": "bundle exec jekyll serve --livereload",
-    "build": "bundle exec jekyll build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mathcale/site.git"
-  },
+  "version": "6.0.0",
   "author": "Matheus Calegaro <hello@matheus.me>",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/mathcale/site/issues"
+  "license": "MIT",
+  "repository": "https://github.com/mathcale/site.git",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "homepage": "https://matheus.me",
   "dependencies": {
-    "bulma": "^0.7.1"
+    "@headlessui/react": "^1.4.0",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.15",
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwind-bootstrap-grid": "^4.0.0",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5"
   }
 }

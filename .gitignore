@@ -1,4 +1,7 @@
-_site
-.sass-cache
-.jekyll-metadata
-/node_modules
+node_modules
+.next
+.vercel
+build
+.env
+.env.*
+.DS_Store
