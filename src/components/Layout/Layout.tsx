@@ -3,10 +3,11 @@ import { Navbar } from '../Navbar/Navbar';
 
 interface LayoutProps {
   absoluteNavbar?: boolean;
+  noBottomSpacing?: boolean;
   children: JSX.Element;
 }
 
-export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
+export function Layout({ absoluteNavbar, noBottomSpacing, children }: LayoutProps): JSX.Element {
   return (
     <>
       <Head>
@@ -23,9 +24,15 @@ export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
         <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
       </Head>
 
-      <div className="relative min-h-screen w-screen bg">
+      <div className="relative min-h-screen bg">
         <Navbar absolute={absoluteNavbar ?? false} />
-        <main className="container pb-24 pl-6 pr-6 md:pl-0 md:pr-0">{children}</main>
+        <main
+          className={['container pl-6 pr-6 md:pl-0 md:pr-0', !noBottomSpacing ? 'pb-24' : ''].join(
+            ' ',
+          )}
+        >
+          {children}
+        </main>
       </div>
 
       <style jsx>{`

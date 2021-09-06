@@ -13,7 +13,7 @@ export default function IndexPage() {
         <title>Matheus Calegaro</title>
       </Head>
 
-      <Layout absoluteNavbar>
+      <Layout absoluteNavbar noBottomSpacing>
         <div className="flex h-screen">
           <div className="row m-auto">
             <div className="col-12 flex justify-center relative -mt-20 md:col-6 md:mt-0">
@@ -21,7 +21,7 @@ export default function IndexPage() {
                 src="/img/dots.svg"
                 width={77}
                 height={77}
-                className="absolute -top-7 -right-1 md:right-10"
+                className="absolute -top-7 -right-1 md:right-20"
               />
 
               <img
@@ -35,7 +35,7 @@ export default function IndexPage() {
             </div>
 
             <div className="col-12 md:col-5 flex flex-col justify-center">
-              <h1 className="mt-12 mb-8 text-3xl text-white font-extrabold md:leading-relaxed md:text-6xl md:mt-0 md:mb-16">
+              <h1 className="mt-12 mb-8 text-3xl text-white font-extrabold md:leading-tight md:text-7xl md:mt-0 md:mb-16">
                 I’m a full-stack Software Engineer from Brazil
               </h1>
 
