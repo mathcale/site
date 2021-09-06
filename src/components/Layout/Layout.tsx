@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { Navbar } from '../Navbar/Navbar';
 
 interface LayoutProps {
@@ -8,6 +9,10 @@ interface LayoutProps {
 export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
   return (
     <>
+      <Head>
+        <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
+      </Head>
+
       <div className="relative min-h-screen w-screen bg">
         <Navbar absolute={absoluteNavbar ?? false} />
         <main className="container">{children}</main>
@@ -15,8 +20,7 @@ export function Layout({ absoluteNavbar, children }: LayoutProps): JSX.Element {
 
       <style jsx>{`
         .bg {
-          background: rgb(25, 31, 38);
-          background: radial-gradient(circle, rgba(25, 31, 38, 0.95) 0%, rgba(25, 31, 38, 1) 100%);
+          background-color: #1a1a2e;
         }
       `}</style>
     </>
