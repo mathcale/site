@@ -36,28 +36,27 @@ export default function AboutPage() {
       from: 'Mar/2019',
       to: 'now',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in ut quis adipiscing. Laoreet ipsum egestas tortor risus in integer congue. Amet lectus in eget platea feugiat pharetra. Arcu est dictum lorem a odio varius cras.',
+        'Built Ame Pro, a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Now building a payment gateway from scratch with Java and Spring WebFlux.',
     },
     {
-      company: 'B2w Digital',
+      company: 'B2W Digital',
       from: 'Nov/2018',
       to: 'Mar/2019',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in ut quis adipiscing. Laoreet ipsum egestas tortor risus in integer congue. Amet lectus in eget platea feugiat pharetra. Arcu est dictum lorem a odio varius cras.',
+        'Development and maintenance of highly available, fault-tolerant applications with Java/Groovy (Spring, Grails), Go and Node.js (Electron), always following the best practices for both code and tests. Was an active member of the Hydra project, a POS solution built exclusively for Lojas Americanas ($LAME4, one of the biggest retailers in Brazil with 1600+ stores all over the country).',
     },
     {
       company: 'Convés Web',
       from: 'Nov/2015',
       to: 'Oct/2018',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in ut quis adipiscing. Laoreet ipsum egestas tortor risus in integer congue. Amet lectus in eget platea feugiat pharetra. Arcu est dictum lorem a odio varius cras.',
+        'Development of web apps and websites, such as institutional pages, information systems with specific requirements, apps with web-services integration and e-commerce.',
     },
     {
       company: 'Secretaria Municipal de Saúde de Mendes',
       from: 'Mar/2013',
       to: 'Oct/2015',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in ut quis adipiscing. Laoreet ipsum egestas tortor risus in integer congue. Amet lectus in eget platea feugiat pharetra. Arcu est dictum lorem a odio varius cras.',
+      description: 'Provided hardware, software and networks support for end users.',
     },
   ];
 
