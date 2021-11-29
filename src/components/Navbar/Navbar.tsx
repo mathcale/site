@@ -15,6 +15,7 @@ export function Navbar({ absolute }: NavbarProps) {
     { title: '/index', href: '/' },
     { title: '/about', href: '/about' },
     { title: '/uses', href: '/uses' },
+    { title: '/blog', href: '/blog' },
     { title: '/contact', href: '/contact' },
   ];
 
