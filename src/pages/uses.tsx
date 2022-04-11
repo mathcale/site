@@ -1,5 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
+
 import { Layout } from '../components';
+
+import styles from '../assets/css/uses.module.css';
+import setupPic from '../assets/img/setup.jpg';
 
 export default function UsesPage() {
   return (
@@ -26,13 +31,9 @@ export default function UsesPage() {
                     <li className="text-white">32GB XPG Gammix D30 RAM @ 3000MHz (4x8GB)</li>
                     <li className="text-white">RX 5700XT Sapphire Nitro+</li>
                     <li className="text-white">Corsair MP500 480GB NVMe SSD</li>
-                    <li className="text-white">Crucial BX500 240GB SSD</li>
                     <li className="text-white">2x 2TB Seagate Barracuda HDDs</li>
                     <li className="text-white">Lian Li Galahad 360mm Watercooler</li>
                     <li className="text-white">750W XPG Core Reactor 80 Plus Gold Power Supply</li>
-                    <li className="text-white">Windows 10</li>
-                    <li className="text-white">Ubuntu 20.04</li>
-                    <li className="text-white">macOS Big Sur (OpenCore)</li>
                   </ul>
                 </div>
 
@@ -40,13 +41,12 @@ export default function UsesPage() {
                   <h3 className="text-lg text-white font-bold mb-7">Laptop</h3>
 
                   <ul>
-                    <li className="text-white">15" 2019 Macbook Pro (from my current employer):</li>
+                    <li className="text-white">13" 2020 Macbook Pro:</li>
                     <ul className="list-disc ml-8">
-                      <li className="text-white">Intel Core i7 six-core</li>
+                      <li className="text-white">Apple M1</li>
                       <li className="text-white">16GB RAM</li>
                       <li className="text-white">240GB SSD</li>
-                      <li className="text-white">Radeon Pro 555X</li>
-                      <li className="text-white">macOS Big Sur</li>
+                      <li className="text-white">macOS Monterey</li>
                     </ul>
                   </ul>
                 </div>
@@ -61,45 +61,65 @@ export default function UsesPage() {
                     <li className="text-white">
                       Pi-hole ad-blocker/DNS (running on Raspberry Pi Zero W)
                     </li>
+                    <li className="text-white">
+                      Deskpi Pro (Raspberry Pi 4 8GB, 1TB SSD) for self-hosted services (Plex, VPN
+                      and media management)
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
 
             <div className="mt-10 md:col-6 md:mt-0">
-              <h2 className="text-2xl text-white font-bold mb-7">Desk setup/accessories</h2>
+              <h2 className="text-2xl text-white font-bold">Desk setup</h2>
 
-              <ul className="list-inside list-disc">
-                <li className="text-white">GenioDesk Plus 1,60mx70cm desk</li>
-                <li className="text-white">THUNDERX3 EC3 chair</li>
-                <li className="text-white">LG 34GL750 34" Ultrawide Monitor</li>
-                <li className="text-white">ELG F80n monitor arm</li>
-                <li className="text-white">Edifier R1000t4 Speakers</li>
-                <li className="text-white">Behringer U-Phoria UM2 Audio Interface</li>
-                <li className="text-white">FJGEAR KVM Switch</li>
-                <li className="text-white">BM800 Condenser Mic</li>
-                <li className="text-white">
-                  Modded SK68 Keyboard w/ Gateron Optical Yellow Swtiches
-                </li>
-                <li className="text-white">Logitech G402</li>
-                <li className="text-white">Logitech MX Master 2s</li>
-                <li className="text-white">HP 90cm x 40cm Deskpad</li>
-              </ul>
-            </div>
-          </div>
+              <div className="row mb-7">
+                <div className="md:col-6">
+                  <ul className="list-inside list-disc mt-7">
+                    <li className="text-white">GenioDesk Plus 1,60mx70cm desk</li>
+                    <li className="text-white">THUNDERX3 EC3 chair</li>
+                    <li className="text-white">LG 34GL750 34" Ultrawide Monitor</li>
+                    <li className="text-white">LG 24ML600M 24" Monitor</li>
+                    <li className="text-white">ELG F80n and F50n monitor arms</li>
+                    <li className="text-white">Aimos 2-in-1 KVM Switch</li>
+                    <li className="text-white">Blitzwolf BW-TH14 docking station</li>
+                    <li className="text-white">
+                      Modded SK68 Keyboard w/ Gateron Optical Yellow Swtiches
+                    </li>
+                    <li className="text-white">Logitech G402</li>
+                    <li className="text-white">Logitech MX Master 2s</li>
+                    <li className="text-white">HP 90cm x 40cm Deskpad</li>
+                  </ul>
+                </div>
 
-          <div className="row mt-10">
-            <div className="md:col-12">
-              <h2 className="text-2xl text-white font-bold mb-7">Programming software</h2>
+                <div className="mt-7 md:col-6">
+                  <ul className="list-inside list-disc">
+                    <li className="text-white">SMSL SU-6 DAC</li>
+                    <li className="text-white">SMSL SH-6 Amp</li>
+                    <li className="text-white">Edifier R1000t4 Speakers</li>
+                    <li className="text-white">Kuba Disco 2</li>
+                    <li className="text-white">Anker Soundcore Q30</li>
+                    <li className="text-white">Airpods Pro</li>
+                    <li className="text-white">KZ ZS-10 Pro</li>
+                    <li className="text-white">Behringer U-Phoria UM2 Audio Interface</li>
+                    <li className="text-white">BM800 Condenser Mic</li>
+                  </ul>
+                </div>
+              </div>
 
-              <ul className="list-inside list-disc">
-                <li className="text-white">VS Code</li>
-                <li className="text-white">IntelliJ IDEA</li>
-                <li className="text-white">NeoVim</li>
-                <li className="text-white">Sublime Text (quick edits)</li>
-                <li className="text-white">Insomnia REST Client</li>
-                <li className="text-white">Postman</li>
-              </ul>
+              {/* <div className="row">
+                <div className="md:col-12"> */}
+              <div className="w-full flex justify-center">
+                <Image
+                  src={setupPic}
+                  width={400}
+                  height={366}
+                  placeholder="blur"
+                  className={styles.pic}
+                />
+              </div>
+              {/* </div>
+              </div> */}
             </div>
           </div>
         </>
