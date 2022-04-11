@@ -32,9 +32,15 @@ interface SkillsMap {
 export default function AboutPage() {
   const experiences: Experience[] = [
     {
+      company: 'Gupy',
+      from: 'Mar/2022',
+      to: 'now',
+      description: 'TBA',
+    },
+    {
       company: 'Ame Digital',
       from: 'Mar/2019',
-      to: 'now',
+      to: 'Feb/2022',
       description:
         'Built Ame Pro, a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Now building a payment gateway from scratch with Java and Spring WebFlux.',
     },
