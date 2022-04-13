@@ -32,9 +32,15 @@ interface SkillsMap {
 export default function AboutPage() {
   const experiences: Experience[] = [
     {
+      company: 'Gupy',
+      from: 'Mar/2022',
+      to: 'now',
+      description: 'TBA',
+    },
+    {
       company: 'Ame Digital',
       from: 'Mar/2019',
-      to: 'now',
+      to: 'Feb/2022',
       description:
         'Built Ame Pro, a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Now building a payment gateway from scratch with Java and Spring WebFlux.',
     },
@@ -192,7 +198,10 @@ export default function AboutPage() {
 
                   <div className="flex flex-row flex-wrap mb-3">
                     {skills[key].items.map((item, j) => (
-                      <div className="bg-white mr-3 mb-3 px-4 py-1 rounded-full font-small" key={j}>
+                      <div
+                        className="bg-zinc-100 mr-3 mb-3 px-4 py-1 rounded-full font-small"
+                        key={j}
+                      >
                         {item.name}
                       </div>
                     ))}

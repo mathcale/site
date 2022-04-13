@@ -16,7 +16,6 @@ export function Navbar({ absolute }: NavbarProps) {
     { title: '/about', href: '/about' },
     { title: '/uses', href: '/uses' },
     { title: '/blog', href: '/blog' },
-    { title: '/contact', href: '/contact' },
   ];
 
   const renderNavLinks = (): JSX.Element[] =>
@@ -26,7 +25,7 @@ export function Navbar({ absolute }: NavbarProps) {
           className={
             router.pathname === navLink.href
               ? 'text-white px-3 py-2 rounded-md text-sm font-bold'
-              : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'
+              : 'text-gray-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'
           }
         >
           {navLink.title}

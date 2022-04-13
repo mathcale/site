@@ -24,7 +24,7 @@ export function Layout({ absoluteNavbar, noBottomSpacing, children }: LayoutProp
         <link rel="icon" type="image/svg+xml" href="/img/logo.svg" />
       </Head>
 
-      <div className="relative min-h-screen bg">
+      <div className="relative min-h-screen bg-zinc-900">
         <Navbar absolute={absoluteNavbar ?? false} />
         <main
           className={['container pl-6 pr-6 md:pl-0 md:pr-0', !noBottomSpacing ? 'pb-24' : ''].join(
@@ -34,12 +34,6 @@ export function Layout({ absoluteNavbar, noBottomSpacing, children }: LayoutProp
           {children}
         </main>
       </div>
-
-      <style jsx>{`
-        .bg {
-          background-color: #1a1a2e;
-        }
-      `}</style>
     </>
   );
 }
