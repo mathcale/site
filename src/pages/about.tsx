@@ -198,7 +198,10 @@ export default function AboutPage() {
 
                   <div className="flex flex-row flex-wrap mb-3">
                     {skills[key].items.map((item, j) => (
-                      <div className="bg-white mr-3 mb-3 px-4 py-1 rounded-full font-small" key={j}>
+                      <div
+                        className="bg-zinc-100 mr-3 mb-3 px-4 py-1 rounded-full font-small"
+                        key={j}
+                      >
                         {item.name}
                       </div>
                     ))}
