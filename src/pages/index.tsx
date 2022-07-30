@@ -60,7 +60,7 @@ export default function IndexPage() {
                 </li>
 
                 <li>
-                  <Link href="/contact">
+                  <Link href="mailto:hello@matheus.me">
                     <a title="Contact">
                       <Image src="/img/email.svg" width={32} height={32} />
                     </a>
