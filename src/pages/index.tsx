@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { Layout } from '../components';
-import pic from '../assets/img/mc.jpg';
+
+import pic from '../assets/img/mc.png';
 import styles from '../assets/css/index.module.css';
 
 export default function IndexPage() {
@@ -36,7 +37,7 @@ export default function IndexPage() {
 
             <div className="col-12 md:col-5 flex flex-col justify-center">
               <h1 className="mt-12 mb-8 text-3xl text-white font-extrabold md:leading-tight md:text-7xl md:mt-0 md:mb-16">
-                I’m a full-stack Senior Software Engineer from Brazil
+                I'm a full-stack Senior Software Engineer from Brazil
               </h1>
 
               <ul className={styles.socials}>
