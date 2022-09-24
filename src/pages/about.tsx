@@ -35,14 +35,15 @@ export default function AboutPage() {
       company: 'Gupy',
       from: 'Mar/2022',
       to: 'now',
-      description: 'TBA',
+      description:
+        'Member of a multi-disciplinary squad that is currently building a product called "Gupy Admissão", an admission management SaaS that is helping companies reduce their time to admit by automating some processes like document collecting and validation, contract signing and overall organization, and also improving their pre-employees\' experience.',
     },
     {
       company: 'Ame Digital',
       from: 'Mar/2019',
       to: 'Feb/2022',
       description:
-        'Built Ame Pro, a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Now building a payment gateway from scratch with Java and Spring WebFlux.',
+        'Built "Ame Pro", a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Then joined a team to help build a payment gateway from scratch with Java and Spring WebFlux.',
     },
     {
       company: 'B2W Digital',
