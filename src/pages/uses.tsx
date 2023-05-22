@@ -27,12 +27,14 @@ export default function UsesPage() {
 
                   <ul className="list-disc list-inside">
                     <li className="text-white">ASRock B450M Steel Legend</li>
-                    <li className="text-white">AMD Ryzen 7 3800x</li>
+                    <li className="text-white">AMD Ryzen 7 3800x @ 4GHz all-cores</li>
                     <li className="text-white">32GB XPG Gammix D30 RAM @ 3000MHz (4x8GB)</li>
                     <li className="text-white">RX 5700XT Sapphire Nitro+</li>
                     <li className="text-white">Corsair MP500 480GB NVMe SSD</li>
-                    <li className="text-white">2x 2TB Seagate Barracuda HDDs</li>
-                    <li className="text-white">Lian Li Galahad 360mm Watercooler</li>
+                    <li className="text-white">1x 2TB Seagate Barracuda HDD</li>
+                    <li className="text-white">1x 8TB Seagate Barracuda HDD</li>
+                    <li className="text-white">1x 480GB Netac SSD</li>
+                    <li className="text-white">Thermalright PA-120 Cooler</li>
                     <li className="text-white">750W XPG Core Reactor 80 Plus Gold Power Supply</li>
                   </ul>
                 </div>
@@ -45,8 +47,8 @@ export default function UsesPage() {
                     <ul className="list-disc ml-8">
                       <li className="text-white">Apple M1</li>
                       <li className="text-white">16GB RAM</li>
-                      <li className="text-white">240GB SSD</li>
-                      <li className="text-white">macOS Monterey</li>
+                      <li className="text-white">1TB SSD</li>
+                      <li className="text-white">macOS Ventura</li>
                     </ul>
                   </ul>
                 </div>
@@ -57,13 +59,9 @@ export default function UsesPage() {
                   <h3 className="text-lg text-white font-bold mb-7">Network</h3>
 
                   <ul className="list-disc list-inside">
-                    <li className="text-white">TP-Link Archer C6</li>
+                    <li className="text-white">TP-Link APs</li>
                     <li className="text-white">
-                      Pi-hole ad-blocker/DNS (running on Raspberry Pi Zero W)
-                    </li>
-                    <li className="text-white">
-                      Deskpi Pro (Raspberry Pi 4 8GB, 1TB SSD) for self-hosted services (Plex, VPN
-                      and media management)
+                      Deskpi Pro (Raspberry Pi 4 8GB, 1TB SSD) for self-hosted services
                     </li>
                   </ul>
                 </div>
@@ -82,13 +80,13 @@ export default function UsesPage() {
                     <li className="text-white">LG 24ML600M 24" Monitor</li>
                     <li className="text-white">ELG F80n and F50n monitor arms</li>
                     <li className="text-white">Aimos 2-in-1 KVM Switch</li>
-                    <li className="text-white">Blitzwolf BW-TH14 docking station</li>
+                    <li className="text-white">Dell D6000S USB-C Docking Station</li>
                     <li className="text-white">
                       Modded SK68 Keyboard w/ Gateron Optical Yellow Swtiches
                     </li>
                     <li className="text-white">Logitech G402</li>
                     <li className="text-white">Logitech MX Master 2s</li>
-                    <li className="text-white">HP 90cm x 40cm Deskpad</li>
+                    <li className="text-white">Steelseries QcK+ Mousepad</li>
                   </ul>
                 </div>
 
@@ -97,10 +95,14 @@ export default function UsesPage() {
                     <li className="text-white">SMSL SU-6 DAC</li>
                     <li className="text-white">SMSL SH-6 Amp</li>
                     <li className="text-white">Edifier R1000t4 Speakers</li>
+                    <li className="text-white">Hifiman Edition XS</li>
                     <li className="text-white">Kuba Disco 2</li>
-                    <li className="text-white">Anker Soundcore Q30</li>
+                    <li className="text-white">Sony WH-1000XM4</li>
                     <li className="text-white">Airpods Pro</li>
-                    <li className="text-white">KZ ZS-10 Pro</li>
+                    <li className="text-white">Tin Hifi T2 DLC</li>
+                    <li className="text-white">Moondrop Chu</li>
+                    <li className="text-white">7Hz Salnotes Zero</li>
+                    <li className="text-white">Simgot EA500</li>
                     <li className="text-white">Behringer U-Phoria UM2 Audio Interface</li>
                     <li className="text-white">BM800 Condenser Mic</li>
                   </ul>
