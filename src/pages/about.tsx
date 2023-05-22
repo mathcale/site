@@ -32,9 +32,15 @@ interface SkillsMap {
 export default function AboutPage() {
   const experiences: Experience[] = [
     {
+      company: 'Mercado Livre',
+      from: 'May/2023',
+      to: 'now',
+      description: 'TBA',
+    },
+    {
       company: 'Gupy',
       from: 'Mar/2022',
-      to: 'now',
+      to: 'Feb/2023',
       description:
         'Member of a multi-disciplinary squad that is currently building a product called "Gupy Admissão", an admission management SaaS that is helping companies reduce their time to admit by automating some processes like document collecting and validation, contract signing and overall organization, and also improving their pre-employees\' experience.',
     },
