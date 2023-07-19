@@ -63,7 +63,7 @@ export default function UsesPage() {
                     <li className="text-white">
                       Deskpi Pro (Raspberry Pi 4 8GB, 1TB SSD) for self-hosted services
                     </li>
-                    <div className="text-white">pfSense+ firewall/router appliance</div>
+                    <li className="text-white">pfSense+ firewall/router appliance</li>
                   </ul>
                 </div>
               </div>
