@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import { Layout } from '../components';
 
-import pic from '../assets/img/mc.png';
+import pic from '../assets/img/mc.jpg';
 import styles from '../assets/css/index.module.css';
 
 export default function IndexPage() {
@@ -37,7 +37,7 @@ export default function IndexPage() {
 
             <div className="col-12 md:col-5 flex flex-col justify-center">
               <h1 className="mt-12 mb-8 text-3xl text-white font-extrabold md:leading-tight md:text-7xl md:mt-0 md:mb-16">
-                I'm a full-stack Software Engineer from Brazil 👋
+                I'm a full-stack Software Engineer from Brazil 👋🏽
               </h1>
 
               <ul className={styles.socials}>
@@ -56,6 +56,12 @@ export default function IndexPage() {
                 <li>
                   <a href="https://codepen.io/mathcale" title="Codepen" target="_blank">
                     <Image src="/img/codepen.svg" width={32} height={32} />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://soundcloud.com/prodbymthx" title="Soundcloud" target="_blank">
+                    <Image src="/img/soundcloud.svg" width={32} height={32} />
                   </a>
                 </li>
 
