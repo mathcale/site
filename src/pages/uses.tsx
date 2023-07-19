@@ -59,10 +59,11 @@ export default function UsesPage() {
                   <h3 className="text-lg text-white font-bold mb-7">Network</h3>
 
                   <ul className="list-disc list-inside">
-                    <li className="text-white">TP-Link APs</li>
+                    <li className="text-white">TP-Link Deco M5 mesh APs</li>
                     <li className="text-white">
                       Deskpi Pro (Raspberry Pi 4 8GB, 1TB SSD) for self-hosted services
                     </li>
+                    <div className="text-white">pfSense+ firewall/router appliance</div>
                   </ul>
                 </div>
               </div>
@@ -75,10 +76,11 @@ export default function UsesPage() {
                 <div className="md:col-6">
                   <ul className="list-inside list-disc mt-7">
                     <li className="text-white">GenioDesk Plus 1,60mx70cm desk</li>
-                    <li className="text-white">THUNDERX3 EC3 chair</li>
+                    <li className="text-white">Comfy Ergofy Top</li>
                     <li className="text-white">LG 34GL750 34" Ultrawide Monitor</li>
                     <li className="text-white">LG 24ML600M 24" Monitor</li>
-                    <li className="text-white">ELG F80n and F50n monitor arms</li>
+                    <li className="text-white">Vertical monitor stand</li>
+                    <li className="text-white">Anma Setups StandPro 2 Black</li>
                     <li className="text-white">Aimos 2-in-1 KVM Switch</li>
                     <li className="text-white">Dell D6000S USB-C Docking Station</li>
                     <li className="text-white">
@@ -109,8 +111,6 @@ export default function UsesPage() {
                 </div>
               </div>
 
-              {/* <div className="row">
-                <div className="md:col-12"> */}
               <div className="w-full flex justify-center">
                 <Image
                   src={setupPic}
@@ -120,8 +120,6 @@ export default function UsesPage() {
                   className={styles.pic}
                 />
               </div>
-              {/* </div>
-              </div> */}
             </div>
           </div>
         </>
