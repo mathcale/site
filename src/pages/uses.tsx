@@ -36,6 +36,7 @@ export default function UsesPage() {
                     <li className="text-white">1x 480GB Netac SSD</li>
                     <li className="text-white">Thermalright PA-120 Cooler</li>
                     <li className="text-white">750W XPG Core Reactor 80 Plus Gold Power Supply</li>
+                    <li className="text-white">Arch Linux</li>
                   </ul>
                 </div>
 
@@ -70,11 +71,13 @@ export default function UsesPage() {
             </div>
 
             <div className="mt-10 md:col-6 md:mt-0">
-              <h2 className="text-2xl text-white font-bold">Desk setup</h2>
+              <h2 className="text-2xl text-white font-bold mb-7">Desk setup</h2>
 
               <div className="row mb-7">
                 <div className="md:col-6">
-                  <ul className="list-inside list-disc mt-7">
+                  <h3 className="text-lg text-white font-bold mb-7">General</h3>
+
+                  <ul className="list-inside list-disc">
                     <li className="text-white">GenioDesk Plus 1,60mx70cm desk</li>
                     <li className="text-white">Comfy Ergofy Top</li>
                     <li className="text-white">LG 34GL750 34" Ultrawide Monitor</li>
@@ -92,7 +95,9 @@ export default function UsesPage() {
                   </ul>
                 </div>
 
-                <div className="mt-7 md:col-6">
+                <div className="md:col-6">
+                  <h3 className="text-lg text-white font-bold mb-7">Audio</h3>
+
                   <ul className="list-inside list-disc">
                     <li className="text-white">SMSL SU-6 DAC</li>
                     <li className="text-white">SMSL SH-6 Amp</li>
