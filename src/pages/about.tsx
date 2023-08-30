@@ -8,6 +8,8 @@ interface Experience {
   from: string;
   to: string;
   description: string;
+  role: string;
+  stack?: string[];
 }
 
 enum SkillType {
@@ -32,17 +34,22 @@ interface SkillsMap {
 export default function AboutPage() {
   const experiences: Experience[] = [
     {
-      company: 'Mercado Livre',
+      company: 'Mercado Libre',
       from: 'May/2023',
       to: 'now',
-      description: 'TBA',
+      description:
+        "Full-stack engineering and development of an internal data enrichment microsservice for Mercado Envios' fullfilment centers (Full)",
+      role: 'Semi-Sr. Software Engineer',
+      stack: ['Go', 'Node.js', 'React'],
     },
     {
       company: 'Gupy',
       from: 'Mar/2022',
       to: 'Feb/2023',
       description:
-        'Member of a multi-disciplinary squad that is currently building a product called "Gupy Admissão", an admission management SaaS that is helping companies reduce their time to admit by automating some processes like document collecting and validation, contract signing and overall organization, and also improving their pre-employees\' experience.',
+        'Worked on "Admissão", an admission management SaaS focused on reducing companies\' "time to admit" by automating processes like document collecting and validation, contract signing and overall organization, and also improving their pre-employees\' experience.',
+      role: 'Sr. Software Engineer',
+      stack: ['Node.js', 'React', 'AWS'],
     },
     {
       company: 'Ame Digital',
@@ -50,6 +57,8 @@ export default function AboutPage() {
       to: 'Feb/2022',
       description:
         'Built "Ame Pro", a mobile POS solution with React Native, Node.js, Typescript, Go and AWS (mostly serverless) until early 2021. Then joined a team to help build a payment gateway from scratch with Java and Spring WebFlux.',
+      role: 'Software Engineer',
+      stack: ['Node.js', 'React Native', 'Go', 'Java', 'Kotlin', 'AWS', 'DynamoDB', 'AuroraDB'],
     },
     {
       company: 'B2W Digital',
@@ -57,6 +66,8 @@ export default function AboutPage() {
       to: 'Mar/2019',
       description:
         'Development and maintenance of highly available, fault-tolerant applications with Java/Groovy (Spring, Grails), Go and Node.js (Electron), always following the best practices for both code and tests. Was an active member of the Hydra project, a POS solution built exclusively for Lojas Americanas ($LAME4, one of the biggest retailers in Brazil with 1600+ stores all over the country).',
+      role: 'Software Engineer',
+      stack: ['Java', 'Go', 'Node.js', 'AWS', 'Spring Boot', 'Grails', 'MongoDB', 'AuroraDB'],
     },
     {
       company: 'Convés Web',
@@ -64,12 +75,16 @@ export default function AboutPage() {
       to: 'Oct/2018',
       description:
         'Development of web apps and websites, such as institutional pages, information systems with specific requirements, apps with web-services integration and e-commerce.',
+      role: 'Full-stack developer',
+      stack: ['PHP', 'Laravel', 'Angular.js', 'Javascript', 'MySQL', 'Magento', 'Wordpress'],
     },
     {
       company: 'Secretaria Municipal de Saúde de Mendes',
       from: 'Mar/2013',
       to: 'Oct/2015',
-      description: 'Provided hardware, software and networks support for end users.',
+      description:
+        'Provided hardware, software and networks support for end users (aka. "the IT guy").',
+      role: 'Intern',
     },
   ];
 
@@ -80,7 +95,8 @@ export default function AboutPage() {
         { name: 'Design patterns' },
         { name: 'Solutions architecturing' },
         { name: 'Clean code' },
-        { name: 'Project structuring' },
+        { name: 'Clean architecture' },
+        { name: 'Testing' },
       ],
     },
     languages: {
@@ -100,6 +116,7 @@ export default function AboutPage() {
         { name: 'Node.js', type: SkillType.HARD },
         { name: 'Nest.js', type: SkillType.HARD },
         { name: 'Spring Boot', type: SkillType.HARD },
+        { name: 'Spring WebFlux', type: SkillType.HARD },
       ],
     },
     frontend: {
@@ -113,6 +130,7 @@ export default function AboutPage() {
         { name: 'Tailwind', type: SkillType.HARD },
         { name: 'Bootstrap', type: SkillType.HARD },
         { name: 'Chakra UI', type: SkillType.HARD },
+        { name: 'Styled Components', type: SkillType.HARD },
       ],
     },
     databases: {
@@ -153,6 +171,7 @@ export default function AboutPage() {
         { name: 'Linode' },
         { name: 'Heroku' },
         { name: 'Firebase' },
+        { name: 'Supabase' },
       ],
     },
     soft: {
@@ -191,7 +210,17 @@ export default function AboutPage() {
                     </span>
                   </h3>
 
+                  <h4 className="text-md text-gray-400 font-medium mb-3">{exp.role}</h4>
+
                   <p className="text-white mt-3">{exp.description}</p>
+
+                  {exp.stack && (
+                    <div className="flex flex-row flex-wrap mt-3">
+                      <p className="font-small font-bold text-gray-500">
+                        Stack: <span className="font-normal">{exp.stack.join(', ')}</span>
+                      </p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
