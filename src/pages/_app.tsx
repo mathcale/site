@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }) {
           gtag('config', '${trackingId}');
         `}
       </Script>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
