@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import { Navbar } from '../Navbar/Navbar';
 
 interface LayoutProps {
@@ -7,16 +8,16 @@ interface LayoutProps {
   children: JSX.Element;
 }
 
-export function Layout({ absoluteNavbar, noBottomSpacing, children }: LayoutProps): JSX.Element {
+export const Layout: React.FC<LayoutProps> = ({ absoluteNavbar, noBottomSpacing, children }) => {
   return (
     <>
       <Head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="I’m a full-stack Software Engineer from Brazil. Check out my page!"
+          content="I'm a full-stack Software Engineer from Brazil. Check out my page!"
         />
         <meta name="author" content="Matheus Calegaro <hello@matheus.me>" />
         <meta name="robots" content="index,follow" />
@@ -36,4 +37,4 @@ export function Layout({ absoluteNavbar, noBottomSpacing, children }: LayoutProp
       </div>
     </>
   );
-}
+};

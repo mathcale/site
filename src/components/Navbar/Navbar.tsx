@@ -7,7 +7,7 @@ interface NavbarProps {
   absolute: boolean;
 }
 
-export function Navbar({ absolute }: NavbarProps) {
+export const Navbar: React.FC<NavbarProps> = ({ absolute }) => {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -19,16 +19,16 @@ export function Navbar({ absolute }: NavbarProps) {
 
   const renderNavLinks = (): JSX.Element[] =>
     navLinks.map((navLink, i) => (
-      <Link href={navLink.href} key={i}>
-        <a
-          className={
-            router.pathname === navLink.href
-              ? 'text-white px-3 py-2 rounded-md text-sm font-bold'
-              : 'text-gray-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'
-          }
-        >
-          {navLink.title}
-        </a>
+      <Link
+        href={navLink.href}
+        key={i}
+        className={
+          router.pathname === navLink.href
+            ? 'text-white px-3 py-2 rounded-md text-sm font-bold'
+            : 'text-gray-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'
+        }
+      >
+        {navLink.title}
       </Link>
     ));
 
@@ -37,11 +37,9 @@ export function Navbar({ absolute }: NavbarProps) {
       <div className="container">
         <div className="flex flex-col md:items-center md:justify-between md:flex-row">
           <div className="flex flex-row items-center justify-between h-20">
-            <Link href="/">
-              <a className="flex items-center ml-3 md:ml-0">
-                <Image src="/img/logo.svg" alt="Logo" width={32} height={32} />
-                <h1 className="text-white font-bold text-xl ml-4">Matheus Calegaro</h1>
-              </a>
+            <Link href="/" className="flex items-center ml-3 md:ml-0">
+              <Image src="/img/logo.svg" alt="Logo" width={32} height={32} />
+              <h1 className="text-white font-bold text-xl ml-4">Matheus Calegaro</h1>
             </Link>
 
             <button
@@ -78,4 +76,4 @@ export function Navbar({ absolute }: NavbarProps) {
       </div>
     </nav>
   );
-}
+};
