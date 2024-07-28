@@ -123,6 +123,7 @@ export default function UsesPage() {
                   height={366}
                   placeholder="blur"
                   className={styles.pic}
+                  alt="Setup picture"
                 />
               </div>
             </div>
