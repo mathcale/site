@@ -2,6 +2,8 @@ import Head from 'next/head';
 
 import { Navbar } from '../Navbar/Navbar';
 
+import type { JSX } from 'react';
+
 interface LayoutProps {
   absoluteNavbar?: boolean;
   noBottomSpacing?: boolean;

@@ -17,8 +17,8 @@ export default function IndexPage() {
 
       <Layout absoluteNavbar noBottomSpacing>
         <div className="flex h-screen">
-          <div className="row m-auto">
-            <div className="col-12 flex items-center justify-center -mt-20 md:col-6 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 m-auto">
+            <div className="flex items-center justify-center -mt-20 md:col-span-6 md:mt-0">
               <div className="relative inline-block">
                 <img
                   src="/img/dots.svg"
@@ -45,7 +45,7 @@ export default function IndexPage() {
               </div>
             </div>
 
-            <div className="col-12 md:col-5 flex flex-col justify-center">
+            <div className="md:col-span-5 flex flex-col justify-center">
               <h1 className="mt-12 mb-8 text-[clamp(1.875rem,1rem+4vw,4.5rem)] leading-tight text-white font-extrabold md:mt-0 md:mb-16">
                 I'm a full-stack Software Engineer from Brazil 👋🏽
               </h1>

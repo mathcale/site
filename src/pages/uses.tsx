@@ -17,12 +17,12 @@ export default function UsesPage() {
         <>
           <h1 className="my-12 text-5xl md:text-6xl text-white font-extrabold">Uses</h1>
 
-          <div className="row">
-            <div className="md:col-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
+            <div className="md:col-span-6">
               <h2 className="text-2xl text-white font-bold mb-7">Computers</h2>
 
-              <div className="row">
-                <div className="md:col-6">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
+                <div className="md:col-span-6">
                   <h3 className="text-lg text-white font-bold mb-7">Desktop</h3>
 
                   <ul className="list-disc list-inside">
@@ -40,7 +40,7 @@ export default function UsesPage() {
                   </ul>
                 </div>
 
-                <div className="mt-7 md:col-6 md:mt-0">
+                <div className="mt-7 md:col-span-6 md:mt-0">
                   <h3 className="text-lg text-white font-bold mb-7">Laptop</h3>
 
                   <ul>
@@ -54,8 +54,8 @@ export default function UsesPage() {
                 </div>
               </div>
 
-              <div className="row mt-7">
-                <div className="col-12">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 mt-7">
+                <div className="md:col-span-12">
                   <h3 className="text-lg text-white font-bold mb-7">Network</h3>
 
                   <ul className="list-disc list-inside">
@@ -69,11 +69,11 @@ export default function UsesPage() {
               </div>
             </div>
 
-            <div className="mt-10 md:col-6 md:mt-0">
+            <div className="mt-10 md:col-span-6 md:mt-0">
               <h2 className="text-2xl text-white font-bold mb-7">Desk setup</h2>
 
-              <div className="row mb-7">
-                <div className="md:col-6">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 mb-7">
+                <div className="md:col-span-6">
                   <h3 className="text-lg text-white font-bold mb-7">General</h3>
 
                   <ul className="list-inside list-disc">
@@ -94,7 +94,7 @@ export default function UsesPage() {
                   </ul>
                 </div>
 
-                <div className="md:col-6">
+                <div className="md:col-span-6">
                   <h3 className="text-lg text-white font-bold mb-7">Audio</h3>
 
                   <ul className="list-inside list-disc">

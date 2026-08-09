@@ -196,8 +196,8 @@ export default function AboutPage() {
         <>
           <h1 className="my-12 text-5xl md:text-6xl text-white font-extrabold">About me</h1>
 
-          <div className="row">
-            <div className="md:col-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6">
+            <div className="md:col-span-6">
               <h2 className="text-2xl text-white font-bold mb-7">Experiences</h2>
 
               {experiences.map((exp, i) => (
@@ -225,7 +225,7 @@ export default function AboutPage() {
               ))}
             </div>
 
-            <div className="md:col-6">
+            <div className="md:col-span-6">
               <h2 className="text-2xl text-white font-bold mb-7">Skills</h2>
 
               {Object.keys(skills).map((key, i) => (
