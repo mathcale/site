@@ -3,3 +3,8 @@
 @theme {
   --font-sans: Poppins, sans-serif;
 }
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
