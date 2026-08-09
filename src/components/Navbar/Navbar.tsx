@@ -14,7 +14,6 @@ export const Navbar: React.FC<NavbarProps> = ({ absolute }) => {
   const navLinks = [
     { title: '/index', href: '/' },
     { title: '/about', href: '/about' },
-    { title: '/uses', href: '/uses' },
   ];
 
   const renderNavLinks = (): JSX.Element[] =>

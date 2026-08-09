@@ -39,7 +39,7 @@ export default function AboutPage() {
       to: 'now',
       description:
         "Full-stack engineering and development of an internal data enrichment microsservice for Mercado Envios' fullfilment centers (Full)",
-      role: 'Semi-Sr. Software Engineer',
+      role: 'Sr. Software Engineer',
       stack: ['Go', 'Node.js', 'React'],
     },
     {

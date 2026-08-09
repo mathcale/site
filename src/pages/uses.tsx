@@ -49,7 +49,6 @@ export default function UsesPage() {
                       <li className="text-white">Apple M1</li>
                       <li className="text-white">16GB RAM</li>
                       <li className="text-white">1TB SSD</li>
-                      <li className="text-white">macOS Ventura</li>
                     </ul>
                   </ul>
                 </div>

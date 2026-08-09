@@ -18,33 +18,35 @@ export default function IndexPage() {
       <Layout absoluteNavbar noBottomSpacing>
         <div className="flex h-screen">
           <div className="row m-auto">
-            <div className="col-12 flex justify-center relative -mt-20 md:col-6 md:mt-0">
-              <img
-                src="/img/dots.svg"
-                width={77}
-                height={77}
-                className="absolute -top-7 -right-1 md:right-20"
-              />
+            <div className="col-12 flex items-center justify-center -mt-20 md:col-6 md:mt-0">
+              <div className="relative inline-block">
+                <img
+                  src="/img/dots.svg"
+                  width={77}
+                  height={77}
+                  className="absolute -top-7 -right-7"
+                />
 
-              <img
-                src="/img/dots.svg"
-                width={77}
-                height={77}
-                className="absolute -bottom-7 -left-1 md:left-20"
-              />
+                <img
+                  src="/img/dots.svg"
+                  width={77}
+                  height={77}
+                  className="absolute -bottom-7 -left-7"
+                />
 
-              <Image
-                src={pic}
-                width={520}
-                height={520}
-                placeholder="blur"
-                className={styles.pic}
-                alt="Matheus's picture"
-              />
+                <Image
+                  src={pic}
+                  width={520}
+                  height={520}
+                  placeholder="blur"
+                  className={styles.pic}
+                  alt="Matheus's picture"
+                />
+              </div>
             </div>
 
             <div className="col-12 md:col-5 flex flex-col justify-center">
-              <h1 className="mt-12 mb-8 text-3xl text-white font-extrabold md:leading-tight md:text-7xl md:mt-0 md:mb-16">
+              <h1 className="mt-12 mb-8 text-[clamp(1.875rem,1rem+4vw,4.5rem)] leading-tight text-white font-extrabold md:mt-0 md:mb-16">
                 I'm a full-stack Software Engineer from Brazil 👋🏽
               </h1>
 
