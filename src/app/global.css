@@ -1,0 +1,149 @@
+:root {
+  --background-color: #1e1e2e;
+  --text-color: #bac2de;
+  --cursor: #f5e0dc;
+  --urls: #f5e0dc;
+
+  --black: #45475a;
+  --black-shade: #585b70;
+  --red: #f38ba8;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+  --blue: #89b4fa;
+  --magenta: #f5c2e7;
+  --cyan: #94e2d5;
+  --white: #bac2de;
+  --white-shade: #a6adc8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--urls);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.main-layout {
+  word-wrap: break-word;
+}
+
+.shell {
+  padding: 20px;
+}
+
+.prompt__dirname,
+.prompt__branch,
+.prompt__git-status,
+.prompt__package,
+.prompt__runtime,
+.prompt__symbol {
+  font-weight: bold;
+}
+
+.prompt__dirname {
+  color: var(--cyan);
+}
+
+.prompt__branch {
+  color: var(--magenta);
+}
+
+.prompt__git-status {
+  color: var(--red);
+}
+
+.prompt__package {
+  color: var(--yellow);
+}
+
+.prompt__runtime {
+  color: var(--green);
+}
+
+.prompt__symbol {
+  margin-right: 10px;
+  color: var(--green);
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: -1px;
+}
+
+.output {
+  margin-top: 3px;
+}
+
+.output ul,
+.output__links {
+  list-style: none;
+}
+
+.output__links {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.output__links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cursor {
+  width: 10px;
+  height: 20px;
+  background-color: var(--cursor);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: reveal-line 0.2s ease-out forwards;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes reveal-line {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+  }
+}
